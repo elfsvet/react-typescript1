@@ -1,7 +1,15 @@
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
 
-function MeetupItem(meetup: any) {
+interface MeetupListProp {
+  id: string;
+  image: string;
+  title: string;
+  address: string;
+  description: string;
+}
+
+function MeetupItem(meetup:MeetupListProp) {
   return (
     <li className={classes.item}>
       <Card>
